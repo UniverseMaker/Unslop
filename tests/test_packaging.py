@@ -58,3 +58,18 @@ def test_plugin_manifest_points_to_existing_parts():
     assert pj["name"] == "unslop"
     assert os.path.exists(os.path.join(ROOT, "skills", "unslop", "SKILL.md"))
     assert os.path.exists(os.path.join(ROOT, "agents", "unslop-rewriter.md"))
+
+
+def test_readme_why_table_targets_pass_slide_lint():
+    """README 「왜 만들었나」 표의 정답 칸은 slide 규칙을 모두 통과해야 한다."""
+    sys.path.insert(0, os.path.join(SKILL, "scripts"))
+    from unslop.lint import lint
+    from unslop.units import Unit
+    text = io.open(os.path.join(ROOT, "README.md"), encoding="utf-8").read()
+    section = text.split("## Why", 1)[1].split("\n## ", 1)[0]
+    rows = [l for l in section.splitlines() if l.startswith("| ") and not l.startswith("| After")]
+    assert rows
+    for row in rows:
+        target = row.strip("| ").split(" | ")[1]
+        found = [f.code for f in lint([Unit(1, "bullet", target)], "slide")]
+        assert not found, (target, found)

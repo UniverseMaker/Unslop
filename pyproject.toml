@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "unslop"
-version = "0.2.0"
+version = "0.2.1"
 description = "연구보고서·PPT·개조식 보고서에 특화된 한국어 업무 문서 윤문 도구 (규칙 검사기 + 게이트 + LLM 윤문)"
 readme = "README.md"
 requires-python = ">=3.10"

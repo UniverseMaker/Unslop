@@ -22,7 +22,7 @@ A general prose rewriter was run over a research-note deck, and sentences like t
 | 선행연구 190편을 받아서 열고 본문을 읽었다 | 선행연구 190편 조사 및 연구 완료 |
 | 사용자 지시: 「…계획부터 다시 짜라」 | 선행연구 조사 및 재계획 지시 |
 | 검증 손실은 좋아졌고 판정 능력은 나빠졌다 | 검증 손실 개선, 판정 능력 하락 |
-| v4 는 JSON 을 내지 못했다 (보고서 본문) | v4는 JSON을 내지 못했다 |
+| v4 는 JSON 을 내지 못했다 | v4 JSON 생성 실패 |
 
 A prose rewriter turns a 「~했다」 sentence into a smoother 「~했다」 sentence. It does not turn it into the noun-ending bullet style (개조식) that slides need.
 It also lets clear mistakes slide, such as a verbatim quote of a spoken instruction or a particle split off by a space, unless they dominate the text.

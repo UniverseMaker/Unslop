@@ -1,6 +1,6 @@
 {
   "name": "unslop",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "연구보고서·PPT·개조식 보고서에 특화된 한국어 윤문 — 코드 검사기와 게이트로 문체 규칙(개조식·종결 통일·번역투·보호 토큰)을 강제한다.",
   "author": { "name": "unslop contributors" },
   "homepage": "https://github.com/UniverseMaker/Unslop",
