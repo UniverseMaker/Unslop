@@ -1,0 +1,5 @@
+# 줄바꿈을 LF 로 고정한다 — Windows 에서 CRLF 로 받으면 docs/RULES.md 비교(CI)가 깨진다
+* text=auto eol=lf
+*.pptx binary
+*.docx binary
+*.png binary

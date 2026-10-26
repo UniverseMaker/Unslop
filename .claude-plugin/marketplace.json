@@ -1,0 +1,18 @@
+{
+  "name": "unslop",
+  "owner": { "name": "unslop contributors" },
+  "metadata": {
+    "description": "연구보고서·PPT·개조식 보고서 한국어 윤문 플러그인",
+    "version": "0.2.0",
+    "pluginRoot": "."
+  },
+  "plugins": [
+    {
+      "name": "unslop",
+      "source": "./",
+      "description": "업무 문서 윤문 스킬(unslop) + 윤문 에이전트(unslop-rewriter). 규칙 검사·게이트는 unslop 명령이 코드로 수행한다.",
+      "version": "0.2.0",
+      "keywords": ["korean", "report", "pptx", "개조식", "윤문"]
+    }
+  ]
+}

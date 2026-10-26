@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unslop"
+version = "0.2.0"
+description = "연구보고서·PPT·개조식 보고서에 특화된 한국어 업무 문서 윤문 도구 (규칙 검사기 + 게이트 + LLM 윤문)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+keywords = ["korean", "ai-slop", "ai-writing", "pptx", "report", "개조식", "윤문"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Natural Language :: Korean",
+  "Topic :: Text Processing :: Linguistic",
+]
+dependencies = []
+
+[project.optional-dependencies]
+pptx = ["python-pptx>=0.6.21"]
+docx = ["python-docx>=1.1"]
+anthropic = ["anthropic>=1.0"]
+all = ["python-pptx>=0.6.21", "python-docx>=1.1", "anthropic>=1.0"]
+dev = ["pytest>=7", "python-pptx>=0.6.21", "python-docx>=1.1"]
+
+[project.scripts]
+unslop = "unslop.cli:main"
+
+# 코드는 스킬 폴더 안에 있다 — 스킬 폴더 하나만 복사·업로드해도 동작하게 하려고(사본을 두지 않는다)
+[tool.setuptools.packages.find]
+where = ["skills/unslop/scripts"]
+include = ["unslop*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["skills/unslop/scripts"]
